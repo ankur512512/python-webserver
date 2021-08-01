@@ -10,6 +10,8 @@ kubectl wait --for=condition=ready pod -n kube-system -l app.kubernetes.io/name=
 
 cd ecosia
 
+docker build -t ecosia:latest .
+
 kubectl apply -f templates/
 
 echo "`minikube ip`  local.ecosia.org" >> /etc/hosts

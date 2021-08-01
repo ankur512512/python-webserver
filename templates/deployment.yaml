@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: server
-        image: ankur512512/berlin:latest
+        image: ankur512512/ecosia:latest
