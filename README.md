@@ -10,7 +10,7 @@ kubectl wait --for=condition=ready pod -n kube-system -l app.kubernetes.io/name=
 
 cd ecosia
 
-docker build -t ecosia:latest .
+docker build -t ecosia:latest docker/.
 
 kubectl apply -f templates/
 

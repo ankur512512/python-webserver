@@ -16,4 +16,5 @@ spec:
     spec:
       containers:
       - name: server
-        image: ankur512512/ecosia:latest
+        image: ecosia:latest
+        imagePullPolicy: Never
