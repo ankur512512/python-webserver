@@ -1,22 +1,22 @@
 #!/bin/bash
 
-echo -e "\n\nEnabling ingress for minikube"
+echo -e "\nEnabling ingress for minikube\n"
 
 minikube addons enable ingress
 
-echo -e "\nWaiting for ingress-controller to get ready..."
+echo -e "\nWaiting for ingress-controller to get ready...\n"
 
 kubectl wait --for=condition=ready pod -n kube-system -l app.kubernetes.io/name=nginx-ingress-controller
 
-echo -e "\nBuilding the docker image locally"
+echo -e "\nBuilding the docker image locally\n"
 
 docker build -t ecosia:latest docker/.
 
-echo -e "\nApplying kubernetes manifests from yaml files store in templates folder..."
+echo -e "\nApplying kubernetes manifests from yaml files store in templates folder...\n"
 
 kubectl apply -f templates/
 
-sleep 4
+sleep 7
 
 POD=$(kubectl get pod -l app=flask -o jsonpath="{.items[0].metadata.name}")
 
