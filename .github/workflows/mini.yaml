@@ -12,13 +12,11 @@ jobs:
       # Build Steps
       - name: Checkout Code
         uses: actions/checkout@v2    
-      - name: Start minikube
+      - name: Start Minikube
+        id: minikube
         uses: hiberbee/github-action-minikube@latest
         with:
-          minikube-version: 'v1.17.0'
-          kubernetes-version: 'v1.19.2'
-          addons: default-storageclass, storage-provisioner, ingress
-          network-plugin: cni
+          profile: github
       - name: Try the cluster !
         run: kubectl get pods -A
       - name: Run everything
