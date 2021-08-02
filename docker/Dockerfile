@@ -4,4 +4,4 @@ RUN apk add python3 py3-pip \
 COPY resources /
 WORKDIR /
 EXPOSE 5000
-ENTRYPOINT ["python3", "server.py"]
+ENTRYPOINT ["sh", "start.sh"]
