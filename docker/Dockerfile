@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk add python3 py3-pip \
+RUN apk add python3 py3-pip requests \
     && pip3 install flask
 COPY resources /
 WORKDIR /
