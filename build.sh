@@ -30,3 +30,5 @@ echo "`minikube ip`  local.ecosia.org" >> /etc/hosts
 echo -e "\nHost entry added. Now testing to see if we get required response with curl command for url -- curl https://local.ecosia.org Here's the result: \n\n"
 
 curl http://local.ecosia.org/tree
+
+echo -e "\n\n"
