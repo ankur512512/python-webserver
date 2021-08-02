@@ -18,8 +18,9 @@ jobs:
         with:
           profile: github
           minikube-version: 1.20.0
+          addons: default-storageclass,storage-provisioner,ingress
       - name: Try the cluster !
-        run: kubectl get pods -A
+        run: sleep 10 && kubectl get pods -A
       - name: Run everything
         run: ./build.sh     
         
