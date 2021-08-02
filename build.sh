@@ -27,7 +27,7 @@ echo -e "\n***Adding host file entry in /etc/hosts..."
 
 echo "`minikube ip`  local.ecosia.org" >> /etc/hosts
 
-echo -e "\n***Host entry added. Now testing to see if we get required response with curl command for url -- curl https://local.ecosia.org Here's the result: \n\n"
+echo -e "\n***Host entry added. Now testing to see if we get required response with this command -- curl https://local.ecosia.org. Here's the result: \n\n"
 
 curl http://local.ecosia.org/tree
 
