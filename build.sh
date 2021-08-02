@@ -6,7 +6,7 @@ minikube addons enable ingress
 
 echo -e "\nWaiting for ingress-controller to get ready...\n"
 
-kubectl wait --for=condition=ready pod -n kube-system -l app.kubernetes.io/name=nginx-ingress-controller
+kubectl wait --timeout=120s --for=condition=ready pod -n kube-system -l app.kubernetes.io/name=nginx-ingress-controller
 
 echo -e "\nBuilding the docker image locally\n"
 
@@ -27,6 +27,6 @@ echo -e "\nAdding host file entry in /etc/hosts..."
 
 echo "`minikube ip`  local.ecosia.org" >> /etc/hosts
 
-echo -e "\nHost entry added. Now testing to see if we get required response with curl command for url -- curl https://local.ecosia.org"
+echo -e "\nHost entry added. Now testing to see if we get required response with curl command for url -- curl https://local.ecosia.org Here's the result: \n\n"
 
 curl http://local.ecosia.org/tree
