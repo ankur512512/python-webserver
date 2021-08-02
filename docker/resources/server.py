@@ -1,12 +1,13 @@
 from flask import Flask, json
 
-companies = {"myFavouriteTree":"Palm"}
+response = {"myFavouriteTree":"tulsi"}
 
 api = Flask(__name__)
 
 @api.route('/tree', methods=['GET'])
 def get_companies():
-  return json.dumps(companies)
+  return json.dumps(response)
 
 if __name__ == '__main__':
-    api.run(host='0.0.0.0') 
+    api.run(host='0.0.0.0')
+    
