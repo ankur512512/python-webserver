@@ -4,7 +4,7 @@ echo -e "\nEnabling ingress for minikube\n"
 
 minikube addons enable ingress
 
-echo -e "\nWaiting for ingress-controller to get ready...\n"
+echo -e "\nWaiting for ingress-controller to get ready, please give it a couple of minutes...\n"
 
 kubectl wait --timeout=120s --for=condition=ready pod -n kube-system -l app.kubernetes.io/name=nginx-ingress-controller
 
