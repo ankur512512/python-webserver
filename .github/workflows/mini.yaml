@@ -1,6 +1,6 @@
 name: Minikube start and deploy
 
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -19,8 +19,6 @@ jobs:
           profile: github
           minikube-version: 1.22.0
           addons: default-storageclass,storage-provisioner,ingress
-      - name: Try the cluster !
-        run: sleep 10 && kubectl get pods -A
       - name: Run everything
         run: ./build.sh     
         
