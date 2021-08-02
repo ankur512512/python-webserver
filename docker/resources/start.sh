@@ -6,4 +6,7 @@ python3 server.py &
 sleep 5
 
 echo -e "\n\nNow executing test cases...\n\n"
-python3 test.py && sh
+python3 test.py
+
+echo -e "\nKeeping the container running forever"
+tail -f /dev/null
