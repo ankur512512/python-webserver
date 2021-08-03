@@ -21,8 +21,8 @@ kubectl logs $POD
 
 until [[ $(kubectl get ingress server-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}') ]]
 do
-echo -e "\n Deployment completed. Waiting for IP to be assigned to ingress resource..."
-sleep 5
+echo -e "\n Deployment completed. Sleeping for 10s until IP is assigned to ingress resource..."
+sleep 10
 done
 
 echo -e "\n***Adding host file entry in /etc/hosts..."
