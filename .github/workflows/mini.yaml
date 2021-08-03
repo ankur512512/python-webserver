@@ -24,7 +24,7 @@ jobs:
 #       - name: testing
 #         run: kubectl wait --timeout=120s --for=condition=ready deploy nginx-ingress-controller
       - name: testing1
-        run: kubectl get deploy -A
+        run: kubectl get deploy -A --show-labels
         
   
     
