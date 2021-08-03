@@ -1,5 +1,5 @@
 
-# Instructions to deploy to Online Minikube Cluster (Prefferred method)
+## Instructions to deploy to Online Minikube Cluster (*Prefferred method*)
 
 We can use a ready made `Minikube Cluster` deployed on cloud for us, if we don't want to install a minikube cluster locally. It's fairly simple, just go to this **[link]** (*open in new browser window*) and click on the blue 'Launch Terminal' button as below:
 <br/><br/>
