@@ -21,8 +21,8 @@ jobs:
           addons: default-storageclass,storage-provisioner,ingress
       - name: Run everything
         run: ./build.sh 
-      - name: testing
-        run: kubectl wait --timeout=120s --for=condition=ready deploy nginx-ingress-controller
+#       - name: testing
+#         run: kubectl wait --timeout=120s --for=condition=ready deploy nginx-ingress-controller
       - name: testing1
         run: kubectl get deploy -A
         
