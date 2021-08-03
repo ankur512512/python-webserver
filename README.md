@@ -96,18 +96,18 @@ We will be using minikube from ``github-actions``. To see more details feel free
 
 ### Automating deployment
 
-This part of the assignment consists of creating the necessary configuration files and build scripts which allow us to build and deploy our web server into a Kubernetes cluster with a single command:
+This part of the assignment consists of creating the necessary configuration files and build scripts which allows us to build and deploy our web server into a Kubernetes cluster with a single command:
 
-- A Dockerfile to build and package your application. `./docker/Dockerfile` is used to build the image and `./docker/resources/start.sh` acts as the startup script for this      container.
-- Kubernetes manifests to deploy out application into our minikube cluster are placed in `./templates` directory consisting of:
+- A Dockerfile to build and package our application. `./docker/Dockerfile` is used to build the image and `./docker/resources/start.sh` acts as the startup script for this      container.
+- Kubernetes manifests to deploy the application into our minikube cluster are placed in `./templates` directory consisting of:
 
-  - ***deployment.yaml***: To create the deployment with one replica. Please note the `imagePullPolicy` is set to `IfNotPresent`, so that it will pickup the local image first. If you want to use a remote docker registry, please change the `image` tag and `imagePullPolicy` accordingly.
+  - ***deployment.yaml***: To create the deployment with one replica. Please note the `imagePullPolicy` is set to `IfNotPresent`, so that it will pickup the local image first. If you want to use a remote docker registry, please push the image `ecosia:latest` to your repo and change the `image` tag and `imagePullPolicy` accordingly.
   - ***service.yaml***: To create a `clusterIP` service, targetting and exposing the port `5000` of the application.
   - ***ingress.yaml***: To create an `ingress` resource, which routes to our web server only on the following URL: http://local.ecosia.org/tree
 
-- A build script `./build.sh` which, in a single command, takes care of building, packaging and deploying our application and configuring our minikube cluster. At the end it tests the ingress also using curl command. Please feel free to go through this script to see the steps used to deploy and configure this project.
+- A build script `./build.sh` which, in a single command, takes care of building, packaging and deploying our application and configuring our minikube cluster. At the end it tests the ingress as well using curl command. Please feel free to go through this script to see the steps used to deploy and configure this project or use these steps to manually deploy the manifests individually.
 
-
+*Cheers !!* :smile: :smile: :smile:
 
 [link]: https://kubernetes.io/docs/tutorials/hello-minikube/#create-a-minikube-cluster
 
