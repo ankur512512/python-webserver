@@ -26,6 +26,12 @@ $ curl http://local.ecosia.org/tree
 
 ```
 
+You should get a result like this:
+
+```markup
+{"myFavouriteTree": "tulsi"}
+```
+
 <br/><br/>
 ### Instructions to deploy to your own minikube cluster
 
@@ -46,6 +52,12 @@ Most of the comments that we will see during the execution of this script are se
 ```markup
 $ curl http://local.ecosia.org/tree
 
+```
+
+You should get a result like this:
+
+```markup
+{"myFavouriteTree": "tulsi"}
 ```
 
 ### ***(Optional)*** Another cool way to see everything it in github actions)

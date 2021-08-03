@@ -6,7 +6,9 @@ echo -e "\n***Enabling ingress for minikube\n"
 
 minikube addons enable ingress
 
-sleep 10 ## Sleeping for some time to let the ingress get ready.
+echo -e "\n***Sleeping for 10s so that ingress pods are ready by then..."
+
+sleep 10
 
 echo -e "\n***Building the docker image locally\n"
 
