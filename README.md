@@ -107,6 +107,15 @@ This part of the assignment consists of creating the necessary configuration fil
 
 - A build script `./build.sh` which, in a single command, takes care of building, packaging and deploying our application and configuring our minikube cluster. At the end it tests the ingress as well using curl command. Please feel free to go through this script to see the steps used to deploy and configure this project or use these steps to manually deploy the manifests individually.
 
+**Version Info**: Tested and verified on "Minikube cluster on Cloud". (the very first method in this README.md file)
+
+- minikube v1.8.1 on Ubuntu 18.04
+- Kubernetes v1.17.3 on Docker 19.03.6
+
+Also, tested and verified in "github-actions":
+- minikube v1.22.0 on Ubuntu 20.04
+- Kubernetes v1.20.0 on Docker 20.10.7
+
 *Cheers !!* :smile: :smile: :smile:
 
 [link]: https://kubernetes.io/docs/tutorials/hello-minikube/#create-a-minikube-cluster
