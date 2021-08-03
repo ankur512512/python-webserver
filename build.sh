@@ -4,10 +4,6 @@ echo -e "\n***Enabling ingress for minikube\n"
 
 minikube addons enable ingress
 
-echo -e "\n***Waiting for ingress-controller to get ready, please give it a couple of minutes...\n"
-
-kubectl wait --timeout=120s --for=condition=ready pod -n kube-system -l app.kubernetes.io/name=nginx-ingress-controller
-
 echo -e "\n***Building the docker image locally\n"
 
 docker build -t ecosia:latest docker/.
@@ -28,6 +24,12 @@ echo -e "\n***Adding host file entry in /etc/hosts..."
 echo "`minikube ip`  local.ecosia.org" | sudo tee -a /etc/hosts
 
 echo -e "\n***Host entry added. Now testing to see if we get required response with this command -- curl http://local.ecosia.org/tree\n Here's the result: \n\n"
+
+until [[ $(kubectl get ingress server-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}') ]]
+do
+echo -e "\n Waiting for ingress resource to get ready..."
+sleep 5
+done
 
 curl http://local.ecosia.org/tree
 
