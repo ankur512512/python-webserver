@@ -1,5 +1,7 @@
 #!/bin/bash
 
+eval $(minikube -p minikube docker-env) ## Setting environment to reuse docker daemon from Minikube
+
 echo -e "\n***Enabling ingress for minikube\n"
 
 minikube addons enable ingress
