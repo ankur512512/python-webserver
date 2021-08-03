@@ -27,7 +27,7 @@ echo -e "\n***Host entry added. Now testing to see if we get required response w
 
 until [[ $(kubectl get ingress server-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}') ]]
 do
-echo -e "\n Waiting for ingress resource to get ready..."
+echo -e "\n Deployment completed. Waiting for IP to be assigned to ingress resource..."
 sleep 5
 done
 
