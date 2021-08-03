@@ -1,10 +1,12 @@
 #!/bin/bash
 
-eval $(minikube -p minikube docker-env) ## Setting environment to reuse docker daemon from Minikube
+eval $(minikube -p minikube docker-env) ## Setting environment to reuse docker daemon from Minikube if needed.
 
 echo -e "\n***Enabling ingress for minikube\n"
 
 minikube addons enable ingress
+
+sleep 10 ## Sleeping for some time to let the ingress get ready.
 
 echo -e "\n***Building the docker image locally\n"
 
@@ -14,7 +16,7 @@ echo -e "\n***Applying kubernetes manifests from yaml files store in templates f
 
 kubectl apply -f templates/
 
-sleep 7
+sleep 10
 
 POD=$(kubectl get pod -l app=flask -o jsonpath="{.items[0].metadata.name}")
 
