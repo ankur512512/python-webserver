@@ -7,7 +7,7 @@ We can use a ready made `Minikube Cluster` deployed on cloud for us, if we don't
 ![image](https://user-images.githubusercontent.com/12583640/127970605-76a8c1c1-8655-47ac-b8bf-b0bd775dde00.png)
 
 <br/><br/>
-After the cluster is ready just execute below commands:
+Make it full screen and after the cluster is ready just execute below commands:
 
 ```markup
 
