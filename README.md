@@ -65,8 +65,15 @@ You should get a result like this:
 This is the fully automated way of deploying and testing this whole project, without even needing to manually execute any command.
 We will be using minikube from ``github-actions``. To see more details feel free to explore the `.github/workflows/mini.yaml` file.
 
-  1. Go to this link: https://github.com/ankur512512/ecosia/actions/workflows/mini.yaml
-  2. Then click on 'Run workflow' dropdown, keep the branch as 'master' and then again click on the green button 'Run worklow' as shown below:
+First of all, you need to sign in to your github account and then fork this project to your own repository, so that you are able to run the github-actions workflow. Then follow these steps:
+
+  1. Go to your forked repository and then click on `Actions` button for your repo. 
+     
+     ![image](https://user-images.githubusercontent.com/12583640/128131036-ecabee6e-1328-47e7-860e-c15c016de441.png)
+     
+     'Accept/Agree' to the prompt which you get to use github-actions workflow.  
+     
+  3. Then click on 'Run workflow' dropdown, keep the branch as 'master' and then again click on the green button 'Run worklow' as shown below:
   
      ![image](https://user-images.githubusercontent.com/12583640/127886929-3194e388-32d5-4232-ab68-0159f9aaf4b6.png)
 
