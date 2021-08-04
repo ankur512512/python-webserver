@@ -73,10 +73,9 @@ First of all, you need to sign in to your github account and then fork this proj
      
      'Accept/Agree' to the prompt which you get to use github-actions workflow.  
      
-  3. Then click on 'Run workflow' dropdown, keep the branch as 'master' and then again click on the green button 'Run worklow' as shown below:
+  3. Click on the blue 'Minikube start and deploy' button. And then click on 'Run workflow' dropdown, keep the branch as 'master' and then again click on the green 'Run worklow' button as shown below:
   
-     ![image](https://user-images.githubusercontent.com/12583640/127886929-3194e388-32d5-4232-ab68-0159f9aaf4b6.png)
-
+     ![Inkedtemp_LI](https://user-images.githubusercontent.com/12583640/128132213-0a8c2efd-cc3d-43ed-a36f-a77a402d17a5.jpg)
   3. After that, click on 'Minikube start and deploy' and on the next screen, click on 'Deploying Minikube' button. Refer to below screenshots:
 
      ![image](https://user-images.githubusercontent.com/12583640/127964047-86398361-f6b1-46a8-bc62-354f3d34174c.png)
@@ -86,7 +85,7 @@ First of all, you need to sign in to your github account and then fork this proj
      
      ![image](https://user-images.githubusercontent.com/12583640/127965781-bab6aa4c-c3a3-4eb8-b0ff-18b8d06a8c87.png)
 
-     You will see the output of curl command in the end of this script.
+     You will see the output of curl command at the end of this script.
   
 
 
