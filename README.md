@@ -60,7 +60,7 @@ You should get a result like this:
 {"myFavouriteTree": "tulsi"}
 ```
 
-### ***(Bonus)*** Another cool way to see everything it in github actions)
+### ***(Bonus)*** Another cool way to see everything it in github actions
 
 This is the fully automated way of deploying and testing this whole project, without even needing to manually execute any command.
 We will be using minikube from ``github-actions``. To see more details feel free to explore the `.github/workflows/mini.yaml` file.
