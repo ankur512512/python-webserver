@@ -17,7 +17,7 @@ jobs:
         uses: hiberbee/github-action-minikube@latest
         with:
           profile: github
-          minikube-version: 1.22.0
+          minikube-version: 1.24.0
           addons: default-storageclass,storage-provisioner,ingress
       - name: Run everything
         run: ./build.sh
