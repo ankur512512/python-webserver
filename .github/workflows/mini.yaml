@@ -21,8 +21,7 @@ jobs:
           addons: default-storageclass,storage-provisioner,ingress
       - name: Run everything
         run: ./build.sh
-      - name: Testing
-        run: kubectl get ingress -A
+      
       
         
   
