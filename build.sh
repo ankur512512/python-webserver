@@ -25,11 +25,11 @@ POD=$(kubectl get pod -l app=flask -o jsonpath="{.items[0].metadata.name}")
 echo -e "\n***Printing container logs showing server logs and local testing."
 kubectl logs $POD 
 
-until [[ $(kubectl get ingress server-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}') ]]
-do
-echo -e "\n Deployment completed. Sleeping for 10s until IP is assigned to ingress resource..."
-sleep 10
-done
+#until [[ $(kubectl get ingress server-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}') ]]
+#do
+#echo -e "\n Deployment completed. Sleeping for 10s until IP is assigned to ingress resource..."
+sleep 30
+#done
 
 kubectl get ingress -A
 
