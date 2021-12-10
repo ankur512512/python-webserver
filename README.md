@@ -119,8 +119,8 @@ This part of the assignment consists of creating the necessary configuration fil
 - Kubernetes v1.17.3 on Docker 19.03.6
 
 Also, tested and verified in "github-actions":
-- minikube v1.22.0 on Ubuntu 20.04
-- Kubernetes v1.20.0 on Docker 20.10.7
+- minikube v1.24.0 on Ubuntu 20.04
+- Kubernetes v1.22.0 on Docker 20.10.7
 
 *Cheers !!* :smile: :smile: :smile:
 
