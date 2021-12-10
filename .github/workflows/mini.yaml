@@ -21,6 +21,10 @@ jobs:
           addons: default-storageclass,storage-provisioner,ingress
       - name: Run everything
         run: ./build.sh
+      - name: testing
+        run: kubectl get ingress server-ingress -o yaml
+      - name: testing-jsonpath
+        run: kubectl get ingress server-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
       
       
         
